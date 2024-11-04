@@ -1,0 +1,392 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/static/background_image/background_showroom.jpg'); /* Replace 'your_image_name.jpg' with the actual file name */
+    background-size: cover; /* This will make the image cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333; /* Dark grey text */
+    padding-bottom: 50px;
+}
+
+/* Header styling */
+header {
+    display: flex; /* Use flexbox for the header */
+    justify-content: space-between; /* Space between nav and title */
+    align-items: center; /* Center vertically */
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 0px;
+}
+
+.branding-icon {
+    display: block;
+    width: 110px; /* Adjust the size as needed */
+    height: auto;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.linkedin-icon{
+    display: block;
+    width: 80px; /* Adjust the size as needed */
+    height: auto;
+    text-decoration: none;
+    margin-left: 200px;
+}
+
+a {
+    text-decoration: none; /* Ensure no underline appears */
+}
+
+.nav-links a {
+    font-size: 25px !important; /* Use !important to override other rules */
+    text-decoration: none;
+    margin-right: 15px;
+}
+}
+nav {
+    display: flex; /* Make the navigation a flex container */
+}
+
+/* Navigation links */
+nav a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.gallery-title {
+    color: white; /* Change title color */
+    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Adjust size as needed */
+    text-align: left; /* Align title to the right */
+    padding-left: 20px
+    padding: 10px 20px; /* Add some padding for spacing */
+}
+
+/* Main container */
+.container {
+    max-width: 1200px; /* Max width for content */
+    margin: auto;
+    padding: 20px;
+}
+
+/* Cars catalog container */
+.cars-catalog {
+    display: grid; /* Use grid layout for vertical ordering */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust column based on available space */
+    grid-gap: 20px; /* Spacing between items */
+    margin-top: 20px;
+}
+
+/* Styling for each car item */
+.car-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Slightly wider than the image width to allow padding */
+    padding: 20px;
+    transition: transform 0.3s;
+    height: 450px; /* Fixed height for all car items */
+}
+
+.car-item:hover {
+    transform: translateY(-5px); /* Elevate effect on hover */
+}
+
+/* Image styling to prevent cutting and ensure all images are the same size */
+.car-item img {
+    width: 300px; /* Make the image fill the width */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Crop image if needed but maintain aspect ratio */
+    border-radius: 8px;
+}
+
+/* Car title and description */
+.car-item h3, .car-item p {
+    text-align: center;
+}
+
+/* Delete button */
+.car-item form {
+    margin-top: 10px;
+}
+
+.btn-danger {
+    background-color: #ff4c4c;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #ff3333;
+}
+
+.content-area {
+    background-color: white; /* White background */
+    padding: 20px; /* Padding around the content */
+    border-radius: 30px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+}
+
+.general-info p {
+    margin: 5px 0; /* Adjust the value as needed */
+}
+
+
+/* Form styling */
+form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #333; /* Dark background for button */
+    color: #fff; /* White text */
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+/* Adjust the submit button */
+.btn-submit {
+    width: 150px !important;/* Default width or set a specific width, e.g., 150px */
+    display: inline-block; /* Keep the button from stretching */
+    margin-top: 15px;
+    padding: 10px 20px; /* Padding for better appearance */
+    background-color: #4caf50 !important;
+}
+
+.btn-primary{
+        background-color: #333;
+        color: #fff;
+}
+
+/* Flash messages */
+.flashes {
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    position: absolute; /* Make the element positionable */
+    top: 30%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half of its own size for true centering */
+    width: 100%; /* Ensure it covers full width */
+    text-align: center; /* Center text inside the flash message */
+    z-index: 1000; /* High z-index to stay on top of other elements */
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #dff0d8; /* Light green background */
+    color: #3c763d; /* Dark green text */
+    border-color: #d6e9c6; /* Border color */
+}
+
+.alert-danger {
+    background-color: #f2dede; /* Light red background */
+    color: #a94442; /* Dark red text */
+    border-color: #ebccd1; /* Border color */
+}
+
+.alert-info {
+    background-color: #d9edf7; /* Light blue background */
+    color: #31708f; /* Dark blue text */
+    border-color: #bce8f1; /* Border color */
+}
+
+.alert-warning {
+    background-color: #fcf8e3; /* Light yellow background */
+    color: #8; /* Dark yellow text */
+    border-color: #faebcc; /* Border color */
+}
+
+/* Center login and register forms */
+.login-container, .register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Form row for Make and Year fields */
+.form-row {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space between elements */
+    margin-bottom: 15px; /* Margin below the row */
+}
+
+/* Styling for the file input container */
+.file-input {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+}
+
+.file-label {
+    margin-right: 10px; /* Space between label and input */
+}
+
+/* Adjust file input */
+input[type="file"] {
+    flex-grow: 1; /* Make file input take remaining space */
+}
+
+/* Additional form control styles */
+.form-control {
+    padding: 10px;
+    width: 100%; /* Full width for input fields */
+    margin-top: 0 !important;
+    padding-top: 10 !important;
+    vertical-align: middle;
+}
+
+#year-select {
+    margin-top: 4px; /* Adjust this value until the alignment looks correct */
+}
+
+/* Year dropdown styling */
+#year-select {
+    appearance: none; /* Remove default styling */
+    padding: 10px; /* Padding for the dropdown */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    position: relative; /* Position for pseudo-element */
+}
+
+/* Custom arrow for dropdown */
+#year-select::after {
+    content: ''; /* Empty content for arrow */
+    position: absolute; /* Absolute positioning */
+    right: 10px; /* Position from the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Centering adjustment */
+    border: solid transparent; /* Transparent border */
+    border-width: 6px; /* Size of the arrow */
+    border-top-color: #333; /* Arrow color */
+}
+
+/* Fixed height for description field */
+.description {
+    height: 100px; /* Height for 5 rows of text */
+    resize: none; /* Prevent resizing */
+}
+
+.btn {
+    padding: 10px 20px;
+}
+
+.profile-image-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.profile-image-container span {
+    display: block;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Car image styling in car_detail.html */
+.car-detail img {
+    width: 100%; /* Ensures the image scales with container width */
+    max-width: 400px; /* Sets a maximum width to keep images consistent */
+    height: 300px; /* Fixed height for all images */
+    object-fit: cover; /* Crops the image while maintaining aspect ratio */
+    border-radius: 8px;
+    margin: 20px 0; /* Optional margin for spacing */
+}
+
+.gray-text {
+    color: gray;
+}
+
+.review-list {
+    list-style-type: disc; /* Default bullet style */
+    padding-left: 30px; /* Adjusts the indentation */
+}
+
+.review-list li {
+    margin-bottom: 5px; /* Adds spacing between reviews */
+}
+
+.reviews {
+    width: 60%; /* Adjust width as desired */
+    max-width: 500px; /* Set a maximum width */
+    margin: 0 auto; /* Center the section */
+    margin-left: 0;
+}
+
+/* Green button for Submit Review and Add Car */
+.btn-success {
+    background-color: #b01780; /* Green background */
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    width: auto; /* Prevents it from stretching across the width */
+}
+
+.btn-success:hover {
+    background-color: #45a053; /* Darker green on hover */
+}
