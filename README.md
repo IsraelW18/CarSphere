@@ -39,4 +39,5 @@ Here is how to do it step-by-step:
    - password: user3
 * You can also Signing-Up and using your own new user
 
+## Summary
 CarSphere reflects expertise in full-stack development, focusing on robust user interaction, admin controls, and modern web technologies.
