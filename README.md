@@ -9,7 +9,7 @@ administrator:
 Non admin user:
  * username: user3
  * password: user3
-=======
+
 # CarSphere
 Car Sphere project
 users:
