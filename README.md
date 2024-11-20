@@ -1,22 +1,25 @@
 # CarSphere web app
-# Owner: Israel Wasserman (im.vaserman@gmail.com)
-Description: Application for Cars review
-Technical details:
-   * languages: Python, HTML (jinja2), JavaScript
-   * Framework: Flask
-   * DB: SQLite using SQLAlchemy
+# Developed by Israel Wasserman (im.vaserman@gmail.com)
+Overview:
+CarSphere is a user-friendly web application designed for car enthusiasts to explore, review, and manage car models. It combines Python and Flask for backend functionality, Jinja2 templating for dynamic HTML rendering, and SQLAlchemy for database management with SQLite.
+Technology Stack:
+ * Languages: Python, HTML (Jinja2), JavaScript
+ * Framework: Flask
+ * Database: SQLite with SQLAlchemy
       
-Functional Information:
- * The application allows users to:
-   - Sign-Up/Login.
-   - Adding reviews for several Car models.
-   - Generate an AI review, this feature connects to an external AI API service.
-   - Admin functionality: admin users can also edit the Cars catalog by add/removing cars items using a dedicated User interface.
+Key Features:
+ * User Authentication: Sign-Up/Login functionality for secure user access.
+ * Car Reviews: Users can add reviews for various car models and even generate AI-driven reviews through integration with an external AI API service.
+ * Admin Tools: Admin users can manage the car catalog, adding or removing car models through a dedicated user interface.
 
-How to use:
- * Download the Repository
- * Go to project location
- * In terminal run the following commands:
+Usage Instructions:
+Download the repository and set up a virtual environment.
+Install dependencies from requirements.txt.
+Run the application and access it via http://127.0.0.1:5000.
+Here is how to do it step-by-step:
+ * Download the Repository from Git-hub
+ * Go to project location on your PC
+ * open a terminal and run the following commands:
     - 'python -m venv venv'
     - (Windows) 'venv\Scripts\activate'
     - (macOS/Linux) 'source venv/bin/activate'
@@ -31,8 +34,9 @@ Login credentials:
    - username: admin
    - password: admin
 
- * Non admin user:
+ * Regular user:
    - username: user3
    - password: user3
+* You can also Signing-Up and using your own new user
 
-* You may Signing-Up and using your own new user
+CarSphere reflects expertise in full-stack development, focusing on robust user interaction, admin controls, and modern web technologies.
