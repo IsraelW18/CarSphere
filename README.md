@@ -20,7 +20,7 @@ Run the application and access it via http://127.0.0.1:5000.
 #### Here is how to do it step-by-step:
  * Download the Repository from Git-hub
  * Go to project location on your PC
- * open a terminal and run the following commands:
+ * Open a terminal and run the following commands:
     - 'python -m venv venv'
     - (Windows) 'venv\Scripts\activate'
     - (macOS/Linux) 'source venv/bin/activate'
