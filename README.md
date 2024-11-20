@@ -1,4 +1,4 @@
-# CarSphere
+# CarSphere web app
 Description: Application for Cars review.
 
 More Info (functionality):
