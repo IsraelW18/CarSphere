@@ -1,5 +1,6 @@
 # CarSphere
 Description: Application for Cars review.
+
 More Info (functionality):
  * The application allows users to:
    - Sign-Up/Login.
