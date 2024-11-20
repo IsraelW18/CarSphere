@@ -1,23 +1,17 @@
 <<<<<<< HEAD
-# Cars-Sphere
-Application that allow for users review Cars models, and also allows to generate AI review. it includes also an admin interface that support add/removing cars items from Catalog.
+# CarSphere
+Description: Application for Cars review.
+More Info (functionality):
+ * The application allows users to:
+   - Sign-Up/Login.
+   - Adding reviews for several Car models.
+   - Generate an AI review, this feature connects to an external AI API service.
+   - Admin functionality: admin users can also edit the Cars catalog by add/removing cars items using a dedicated User interface.
 Login credentials:
-administrator:
+Admin user:
  * username: admin
  * password: admin
 
 Non admin user:
  * username: user3
  * password: user3
-
-# CarSphere
-Car Sphere project
-users:
-* sdmin user:
-*  - username: admin
-   - password: admin
-
-* non admin user:
-*   - username: user3
-    - password: user3
->>>>>>> cfc5e0f1a5a61acb459e78aa5286b238c32a0148
