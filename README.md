@@ -9,9 +9,9 @@ More Info (functionality):
 
 Login credentials:
  * Admin user:
-  - username: admin
-  - password: admin
+   - username: admin
+   - password: admin
 
  * Non admin user:
-  - username: user3
-  - password: user3
+   - username: user3
+   - password: user3
