@@ -38,20 +38,25 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User()
-        user.set_username(form.username.data)
-        user.set_password(form.password.data)
-        user.set_firstname(form.firstname.data)
-        user.set_lastname(form.lastname.data)
-        # user.set_profile_image()  # Set a random profile image
-        user.set_current_time()
-        db.session.add(user)
-        db.session.commit()
+        # Checking that the new username the user entered do not exist in the DB already
+        existing_user = User.query.filter_by(username=form.username.data).first()
+        if existing_user:
+            flash(f"Username '{existing_user.username}' already exist, please try another username.", 'danger')
+        else:
+            user.set_username(form.username.data)
+            user.set_password(form.password.data)
+            user.set_firstname(form.firstname.data)
+            user.set_lastname(form.lastname.data)
+            # user.set_profile_image()  # Set a random profile image
+            user.set_current_time()
+            db.session.add(user)
+            db.session.commit()
 
-        login_user(user)
+            login_user(user)
 
-        flash(f"Welcome, {user.first_name} {user.last_name} and thanks for registration!<br><br>"
-              f"!!! You're already logged-in. Let's Begin !!! ", 'success')
-        return redirect(url_for('home'))
+            flash(f"Welcome, {user.first_name} {user.last_name} and thanks for registration!<br><br>"
+                  f"!!! You're already logged-in. Let's Begin !!! ", 'success')
+            return redirect(url_for('home'))
     return render_template('register.html', form=form)
 
 
