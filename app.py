@@ -1,3 +1,4 @@
+import sqlite3
 from datetime import datetime
 from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_sqlalchemy import SQLAlchemy
@@ -136,6 +137,18 @@ def all_rights():
 ########################
 ## App & DB Maintenance
 # Deleting all users from user table in DB
+@app.route('/get-users')
+def get_users():
+    # עדכן את השם אם הוא שונה
+    db_path = os.path.join(app.instance_path, 'site.db')
+    connection = sqlite3.connect(db_path)
+    cursor = connection.cursor()
+    cursor.execute("SELECT username FROM user")  # החלף users בשם הטבלה שלך
+    rows = cursor.fetchall()
+    connection.close()
+
+    return [''.join(row) for row in rows]
+
 @app.route('/delete_all_users', methods=['GET'])
 def delete_all_users():
     try:
