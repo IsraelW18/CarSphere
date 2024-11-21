@@ -139,11 +139,10 @@ def all_rights():
 # Deleting all users from user table in DB
 @app.route('/get-users')
 def get_users():
-    # עדכן את השם אם הוא שונה
     db_path = os.path.join(app.instance_path, 'site.db')
     connection = sqlite3.connect(db_path)
     cursor = connection.cursor()
-    cursor.execute("SELECT username FROM user")  # החלף users בשם הטבלה שלך
+    cursor.execute("SELECT username FROM user")
     rows = cursor.fetchall()
     connection.close()
 
