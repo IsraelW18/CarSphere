@@ -13,8 +13,12 @@ class RegistrationForm(FlaskForm):
     firstname = StringField('First Name', validators=[DataRequired(), Length(min=2, max=150)])
     lastname = StringField('Last Name', validators=[DataRequired(), Length(min=2, max=150)])
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=150)])
-    password = PasswordField('Password', validators=[DataRequired()])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    password = PasswordField('Password', validators=[
+        DataRequired(),
+        EqualTo('password', message='Passwords are not match')])
+    confirm_password = PasswordField('Confirm Password', validators=[
+        DataRequired(),
+        EqualTo('password', message='Passwords are not match')])
     submit = SubmitField('Register')
 
 class AddCarForm(FlaskForm):

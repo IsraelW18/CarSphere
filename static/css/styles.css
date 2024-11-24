@@ -232,6 +232,11 @@ input[type="submit"]:hover {
     color: #a94442; /* Dark red text */
     border-color: #ebccd1; /* Border color */
 }
+.text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 .alert-info {
     background-color: #d9edf7; /* Light blue background */
