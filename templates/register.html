@@ -19,15 +19,15 @@
             <div class="form-group">
                 {{ form.password.label }}
                 {{ form.password(class="form-control") }}
-                {% for error in form.confirm_password.errors %}
-                    <span class="text-danger">{{ error }}</span>
+                {% for error in form.password.errors %}
+                    <span class="text-danger" id="pass">{{ error }}</span>
                 {% endfor %}
             </div>
             <div class="form-group">
                 {{ form.confirm_password.label }}
                 {{ form.confirm_password(class="form-control") }}
                 {% for error in form.confirm_password.errors %}
-                    <span class="text-danger">{{ error }}</span>
+                    <span class="text-danger" id="confirm_pass">{{ error }}</span>
                 {% endfor %}
             </div>
             <button type="submit" class="btn btn-primary">Sign Up</button>
