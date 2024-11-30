@@ -1,4 +1,4 @@
-# CarSphere web app
+# CarSphere web app Portfolio
 ## Developed by Israel Wasserman [LinkedIn](https://www.linkedin.com/in/israel-wasserman/)
 ## Overview:
 CarSphere is a user-friendly web application designed for car enthusiasts to explore, review, and manage car models. It combines Python and Flask for backend functionality, Jinja2 templating for dynamic HTML rendering, and SQLAlchemy for database management with SQLite.
