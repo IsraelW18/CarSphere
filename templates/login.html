@@ -13,9 +13,12 @@
                 {{ form.password(class="form-control") }}
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
+            <br><br>
+            <p class="signup-prompt">
+                Still not a user ? <a href="{{ url_for('register') }}"
+                                      style="font-weight: bold;">Sign Up</a> For Free
+            </p>
         </form>
-        <p class="signup-prompt">
-            Still not a user ? <a href="{{ url_for('register') }}">Sign Up</a> For Free
-        </p>
+
     </div>
 {% endblock %}

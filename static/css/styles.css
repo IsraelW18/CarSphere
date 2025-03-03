@@ -395,3 +395,7 @@ input[type="file"] {
 .btn-success:hover {
     background-color: #45a053; /* Darker green on hover */
 }
+
+.signup-prompt {
+    color: block;
+}
