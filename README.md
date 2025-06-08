@@ -30,7 +30,7 @@ Run the application and access it via http://127.0.0.1:5000.
     - go to the following URL in your browser 'http://127.0.0.1:5000'
     - Enjoy :)
 
-### Login credentials: 
+### Login credentials:
  * Admin user:
    - username: admin
    - password: admin
