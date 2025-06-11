@@ -14,7 +14,7 @@ from flask import jsonify
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SECRET_KEY'] = os.urandom(24)  # יצירת מפתח
+app.config['SECRET_KEY'] = os.urandom(24) 
 
 db.init_app(app)
 migrate = Migrate(app, db)
@@ -141,7 +141,7 @@ def all_rights():
 
 ########################
 ## App & DB Maintenance
-# Deleting all users from user table in DB
+# Deleting all users from the user table in DB
 @app.route('/get-users')
 def get_users():
     db_path = os.path.join(app.instance_path, 'site.db')
@@ -252,7 +252,7 @@ def delete_car(car_id):
         car_id_in_review_table.append(car_id_rev.car_id)
     # Step_2: Checking if the current 'car_id' exist in the Review table.
     if car_id in car_id_in_review_table:
-        # If so, delete process will not be allowed and relevant message will be displayed to the user.
+        # If so, a delete process will not be allowed and relevant message will be displayed to the user.
         flash('Car includes user reviews and cannot be deleted !', 'danger')
         return redirect(url_for('home'))
     # If the current 'car_id' do not included in the Review table, it means that it do not include
