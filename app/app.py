@@ -4,20 +4,24 @@ from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
-from forms import LoginForm, RegistrationForm, AddCarForm, ReviewForm
-from models import User, Car, Review
-from models import db
+from app.forms import LoginForm, RegistrationForm, AddCarForm, ReviewForm
+from app.models import User, Car, Review
+from app.models import db
 import os
 from werkzeug.utils import secure_filename
 import requests
 from flask import jsonify
+from api import api_bp  # Import the API blueprint
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SECRET_KEY'] = os.urandom(24)  # יצירת מפתח
+app.config['SECRET_KEY'] = os.urandom(24)  # Creating key
 
 db.init_app(app)
 migrate = Migrate(app, db)
+
+# Register the API blueprint
+app.register_blueprint(api_bp, url_prefix='/api/v1')
 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
